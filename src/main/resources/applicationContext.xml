@@ -5,4 +5,9 @@
 	
 	<bean id="userBean" class="kr.co.example.diexam01.UserBean"></bean>
 	<!-- kr.or.connect.diexam01.UserBean userBean = new kr.or.connect.diexam01.UserBean(); 으로 객체 생성하게 됨 -->
-</beans>
+	<bean id="e" class="kr.co.example.diexam01.Engine"/>
+	<bean id="c" class="kr.co.example.diexam01.Car">
+	<!--c객체의 property(setter, getter) 중 engine이 들어간 property(setEngine)에 e객체를 주입해라! -->
+		<property name="engine" ref="e"></property>
+	</bean>
+</beans> 
